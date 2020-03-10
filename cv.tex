@@ -1,10 +1,11 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 
-\usepackage[top=1in, bottom=0.3in, left=0.3in, right=0.3in]{geometry}
+\usepackage[top=0.5in, bottom=0.3in, left=0.3in, right=0.3in]{geometry}
 \usepackage{hhline}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
+\usepackage{multirow}
 
 \usepackage{array}
 \usepackage[{margin=0.25in,justification=raggedright,singlelinecheck=false,font={large,bf}}]{caption}
@@ -12,35 +13,32 @@
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+
 \begin{document}
 
-\begin{table}[h!]
-\begin{center}
-\caption*{Образование}
+\def\arraystretch{2}%
+\begin{tabular}
+{ L{13cm} }
+\textbf{Круглов Степан}\newline
++7 (977) 252 10 26 \newline
+ kruglovstepan367@gmail.com
+\end{tabular}
+
 \def\arraystretch{1.7}%
 \begin{tabular}
-{ L{13cm} R{5cm} } \hhline{|=|=|}
+{ L{13cm} R{5cm} }
+\multicolumn{2}{l}{\textbf{Образование}} \\ \hhline{|=|=|}
 
 \textbf{Высшая школа экономики}\newline
 Инфокоммуникационные технологии и системы связи\newline
 Электронная инженерия\newline
 \emph{Бакалавриат}\newline
+
 & \textbf{Москва}\newline2014 – 2018\\
-
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[h!]
-\begin{center}
-\caption*{Опыт работы}
-\def\arraystretch{1.7}%
-\begin{tabular}
-{ L{13cm} R{5cm} } \hhline{|=|=|}
+\multicolumn{2}{ l }{\textbf{Опыт работы}} \\ \hhline{|=|=|}
 
 \textbf{ПАО ВТБ}\newline
 \emph{Старший разработчик}\medskip
-
 
 & \textbf{Москва}\newlineАвгуст 2019 - настоящее время \\
 
@@ -62,24 +60,16 @@
 Покрытие регресс-тестами существующий функционал на срочном рынке (с использованием Groovy, TestNG, Jenkins). Рефакторинг старого кода. Написание вспомогательных библиотек для работы с биржевым протоколом передачи данных Plaza II.
 & \textbf{Москва}\newlineИюнь 2017 – Март 2018\newline(10 месяцев) \\
 
+\multicolumn{2}{ l }{\textbf{Навыки}} \\ \hhline{|=|=|}
 \end{tabular}
-\end{center}
-\end{table}
 
-\begin{table}[h!]
-\begin{center}
-\caption*{Навыки}
-\def\arraystretch{1.7}%
 \begin{tabular}
-{ L{18.3cm} } \hhline{|=|}
-
+{ L{18cm} }
 \textbf{Знание языков:} Русский (родной), Английский (чтение документации)\newline
-\textbf{Профессиональные навыки:} Java, Groovy, Maven, TestNG, Git, Hibernate, Spring Framework, Liqubase, Vue.js, PostgreSQL\medskip
+\textbf{Профессиональные навыки:} Java, Groovy, Maven, TestNG, Git, Hibernate, Spring Framework, Liqubase, Vue.js, PostgreSQL \medskip
 
 Основной язык программирования Java 8. В работе предпочитаю использовать Linux (Ubuntu, Mint). Могу самостоятельно разобраться в чужом коде. Имею опыт поддержки legacy кода. Есть опыт работы в команде (уточнение бизнес требований у аналитиков, взаимодействие с тестировщиками). Использовал в работе инструменты Atlassian (Jira, Crucible, Confluence). Знаю основные паттерны проектирования. Есть опыт написания приложения на Android. Имеются базовые навыки написания программ на C/C++ (в частности, для прошивок микроконтроллеров AVR и STM32).
 
 \end{tabular}
-\end{center}
-\end{table}
 
 \end{document}
